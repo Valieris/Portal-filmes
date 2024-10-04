@@ -25,11 +25,14 @@ export default function MovieListPage() {
             />
             <section className="flex">
                 {
-                    
+                    filmesFiltrados.length > 0 ?
+
                     filmesFiltrados
                         .map(filme => (
                             <MovieCard key={filme.id} {...filme} />
                         ))
+                    :
+                    <p>Filme não encontrado</p>
                 }
             </section>
         </>
